@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/cdn.thegrid.io/gss/v2.0.0/v2.0.0/gss.min.js"></script> 
+    <script type="text/javascript">
+      window.engine = new GSS(document);
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="style/index.css"></link>
+    <style type="text/gss">
+      //The picture of me with my name
+      "me"[bottom] == ::window[center-y];
+      "me"[left] == #portrait[left];
+      "me"[right] == #name[right];
+      "me"[bottom] == #portrait[bottom];
+
+      //The picture of me
+      #portrait[height] == 160;
+      #portrait[width] == #portrait[height];
+      #portrait[center-y] == "me"[center-y];
+
+      //My name
+      #name[size] == #name[intrinsic-size];
+      #name[center-y] == "me"[center-y];
+
+      //Positioning
+      @h |-(#portrait)-25-(#name)-|;
+
+      @h <"me"[left]>(#contact)<"me"[right]>;
+
+      @v ("me")(#contact);
+    </style>
+
+    <title>Michael Black</title>
+  </head>
+  <body>
+    <img id="portrait" src="img/me.jpg"></img>
+    <div id="name">Michael</br>Black</div>
+    <ul id="contact">
+      <li class="github">
+        <a href="https://github.com/michaelblack">github</a>
+      </li>
+      <li class="linkedin">
+        <a href="https://www.linkedin.com/in/michaelfblack">linkedin</a>
+      </li>
+    </ul>
+  </body>
+</html>

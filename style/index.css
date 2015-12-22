@@ -1,0 +1,48 @@
+* {
+  font-family: Courier New;
+  color: #222244;
+}
+
+body {
+   background-color: #FFFFF9;
+}
+
+#portrait {
+  border-radius: 16px;
+}
+
+#name {
+  font-weight: bold;
+  font-size: 72;
+}
+
+#contact {
+  font-size: 20;
+}
+
+#contact li {
+  display: inline;
+}
+
+#contact li:after {
+  content: "|";
+}
+
+#contact li:last-child:after {
+  content: none;
+}
+
+#contact li a {
+  color: #0000EE;
+  text-decoration: none;
+}
+
+.github:before {
+  font-family: FontAwesome;
+  content: "\f092";
+}
+
+.linkedin:before {
+  font-family: FontAwesome;
+  content: "\f08c";
+}
